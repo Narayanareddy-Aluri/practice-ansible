@@ -5,4 +5,4 @@
   - name: nginx install
     ansible.builtin.package:
       name: nginx
-      state: abesent
+      state: absent
