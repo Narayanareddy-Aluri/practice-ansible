@@ -1,0 +1,8 @@
+- name: vars from outside yaml files
+  hosts: local
+  connection: local
+  vars_files:
+  - emp_details.yaml
+  tasks:
+    ansible.builtin.debug:
+      msg: "Hello, my name {{NAME}}"

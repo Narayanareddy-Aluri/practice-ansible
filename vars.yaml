@@ -1,11 +1,11 @@
-- name: vars practice
+- name: play level vars
   hosts: local
   connection: local
   vars:
     Name: "Reddy"
     AGE: "30"
   tasks:
-    - name: details of emp
+    - name: task level vars
       vars:
         Name: "Veni"
       ansible.builtin.debug:
