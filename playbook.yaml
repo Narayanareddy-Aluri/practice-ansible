@@ -1,6 +1,12 @@
 - name: print msg
   hosts: local
+  become: yes
   tasks:
-  - name: hello
-    ansible.builtin.debug:
-      msg: "love you"
+  - name: installing nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present
+  - name: starting the nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
