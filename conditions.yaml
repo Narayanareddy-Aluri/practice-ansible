@@ -2,11 +2,11 @@
   hosts: local
   connection: local
   vars_prompt:
-  - name: check the sessions
+  - name: sessions
     prompt: enter number of sessions
     private: false
   tasks:
   - name: print msg
     ansible.builtin.debug:
       msg: "session are more than 5"
-    when: (vars_prompt > 5)
+    when: sessions | int > 5
