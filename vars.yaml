@@ -8,5 +8,5 @@
     - name: details of emp
       vars:
         Name: "Veni"
-        ansible.builtin.debug:
-          msg: "emp name: {{ Name }} and age is {{ AGE }}"
+      ansible.builtin.debug:
+        msg: "emp name: {{ Name }} and age is {{ AGE }}"
