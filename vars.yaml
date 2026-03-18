@@ -6,5 +6,7 @@
     AGE: "30"
   tasks:
     - name: details of emp
-      ansible.builtin.debug:
-        msg: "emp name: {{ Name }} and age is {{ AGE }}"
+      vars:
+        Name: "Veni"
+        ansible.builtin.debug:
+          msg: "emp name: {{ Name }} and age is {{ AGE }}"
