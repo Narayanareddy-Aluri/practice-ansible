@@ -1,8 +1,6 @@
-- name: install nginx
+- name: print message
   become: yes
   hosts: frontend
   tasks:
-  - name: nginx install
-    ansible.builtin.package:
-      name: nginx
-      state: absent
+  - name: Hello world
+    ansible.builtin.debug:
