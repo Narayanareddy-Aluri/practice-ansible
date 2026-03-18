@@ -1,0 +1,4 @@
+-name : ping the user
+ hosts : local
+-tasks:
+  ansible.builtin.ping:
