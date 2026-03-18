@@ -1,0 +1,21 @@
+- name: demo on datatypes
+  hosts: local
+  connection: local
+  vars:
+    PROGRAME: "Devscops" #string
+    DURATION: "120" #int
+    IS_LIVE: true
+    DETAILS:
+      TRAINER: "SHIva"
+      MONTHS: 4
+    TOPICS:
+    - linux
+    - ansible
+  tasks:
+  - name: print the values
+    ansible.builtin.debug:
+      msg: |
+        programe: {{ PROGRAME }}
+        duration: {{ DURATION }}
+        details: {{ DETAILS }}
+        topics: {{ TOPICS }}
