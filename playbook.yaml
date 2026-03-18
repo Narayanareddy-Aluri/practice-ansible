@@ -1,7 +1,6 @@
-- name: print message
-  become: yes
-  hosts: frontend
+- name: print msg
+  hosts: local
   tasks:
-  - name: Hello world
+  - name: hello
     ansible.builtin.debug:
-      msg: "i love veni"
+      msg: "love you"
