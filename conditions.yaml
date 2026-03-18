@@ -7,4 +7,4 @@
   - name: print msg
     ansible.builtin.debug:
       msg: "ansible class is live"
-      when: IS_LIVE
+    when: IS_LIVE
