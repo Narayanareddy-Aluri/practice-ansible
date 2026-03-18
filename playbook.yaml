@@ -1,4 +1,4 @@
--name : ping the user
- hosts : frontend
--tasks:
+- name: ping the user
+  hosts: frontend
+  stasks:
   ansible.builtin.ping:
