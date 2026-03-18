@@ -1,10 +1,12 @@
 - name: conditions
   hosts: local
   connection: local
-  vars:
-    IS_LIVE: false
+  vars_prompt:
+  - name: check the sessions
+    prompt: enter number of sessions
+    private: false
   tasks:
   - name: print msg
     ansible.builtin.debug:
-      msg: "ansible class is live"
-    when: IS_LIVE
+      msg: "session are more than 5"
+    when: vars_prompt > 5
