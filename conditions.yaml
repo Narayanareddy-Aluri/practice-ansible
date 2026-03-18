@@ -9,4 +9,4 @@
   - name: print msg
     ansible.builtin.debug:
       msg: "session are more than 5"
-    when: vars_prompt > 5
+    when: (vars_prompt > 5)
